@@ -2,6 +2,11 @@
 
 namespace DesignPattern_MultiTon.MultiTon_Classes
 {
+    /// <summary>
+    /// Imagine there are several cameras in an organization. For each camera, no more than one object should be created.
+    /// This can be achieved using the Singleton pattern; however, it would require creating a separate Singleton class for each camera.
+    /// Using the Multiton pattern, we can create multiple controlled instances for each camera instead.
+    /// </summary>
     public sealed class Camera
     {
         private static volatile Dictionary<string, Camera> _instanses = new Dictionary<string, Camera>();
